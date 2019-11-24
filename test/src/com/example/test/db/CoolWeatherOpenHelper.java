@@ -10,14 +10,18 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	/**
 	 *  Province表建表语句
 	 */
-	public static final String CREATE_PROVINCE = "create table Province ("
-				+ "id integer primary key autoincrement, " 
-				+ "province_name text, "
+	public static final String CREATE_PROVINCE = "create table Province ("//创建Province表
+				+ "id integer primary key autoincrement, " //id  起的字段名字。
+														   //integer  数据类型。
+														   //primary key 定义这个字段为主键。
+														   //auto_increment 定义这个字段为自动增长，即如果INSERT时不赋值，
+														   //则自动加1
+				+ "province_name text, "//province_name 字段名，text 数据类型
 				+ "province_code text)";
 	/**
 	 *  City表建表语句
 	 */
-	public static final String CREATE_CITY = "create table City ("
+	public static final String CREATE_CITY = "create table City ("//创建City表
 				+ "id integer primary key autoincrement, " 
 				+ "city_name text, " 
 				+ "city_code text, " 
@@ -25,7 +29,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	/**
 	 *  County表建表语句
 	 */
-	public static final String CREATE_COUNTY = "create table County ("
+	public static final String CREATE_COUNTY = "create table County ("//创建Country表
 				+ "id integer primary key autoincrement, " 
 				+ "county_name text, " 
 				+ "county_code text, " 

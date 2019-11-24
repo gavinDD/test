@@ -13,14 +13,14 @@ public class HttpUtil {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				HttpURLConnection connection = null;
+				HttpURLConnection connection = null;//HttpURLConnection类主要用来服务器端发送Http请求
 				try {
 					URL url = new URL(address);
 					connection = (HttpURLConnection) url.openConnection();
-					connection.setRequestMethod("GET");
-					connection.setConnectTimeout(8000);
-					connection.setReadTimeout(8000);
-					InputStream in = connection.getInputStream();
+					connection.setRequestMethod("GET");//设置请求方式
+					connection.setConnectTimeout(8000);// 8秒 连接主机的超时时间（单位：毫秒）
+					connection.setReadTimeout(8000);// 8秒 从主机读取数据的超时时间（单位：毫秒）
+					InputStream in = connection.getInputStream();//得到一个输入流
 					BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 					StringBuilder response = new StringBuilder();
 					String line;
